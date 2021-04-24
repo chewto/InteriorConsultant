@@ -1,0 +1,337 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-size: 15px;
+	color: #fff;
+}
+
+body{
+	background: #151515;
+}
+
+#active{
+
+}
+
+.toggle-btn{
+	position: absolute;
+	left: -10em;
+}
+
+.Crimson-pro{
+	font-family: 'Crimson Pro', serif;
+}
+
+.Lora{
+	font-family: 'Lora', serif;
+}
+
+.Montserrat{
+	font-family: 'Montserrat', sans-serif;
+}
+
+.navbar{
+	display: flex;
+	justify-content: space-between;
+	margin: 2.5em 3em;
+}
+
+.navbar__h3{
+	font-size: .8em;
+	letter-spacing: 1px;
+	border: 1px solid #fff;
+	padding: .4em .5em;
+}
+
+.navbar-div__ul{
+	list-style: none;
+}
+
+.navbar-div__li{
+	display: inline-block;
+	margin: auto 3.2em;
+}
+
+.navbar-li__a{
+	text-decoration: none;
+	font-weight: 500;
+}
+
+.first{
+	font-size: 1.1em;
+	font-weight: 700;
+	border-bottom: 3px solid #fff;
+	padding: 0 0 .3em 0;
+	text-decoration: none; 
+}
+
+.section{
+	display: flex;
+	justify-content: space-between;
+	margin: 3em 6em 0 3em;
+}
+
+.section-art{
+	margin: auto 0;
+	animation-name: article;
+	animation-duration: 1000ms;
+	animation-delay: 400ms;
+}
+
+.section-art__h1{
+	font-size: 2.5em;
+	margin: .8em 0;
+	font-weight: 500;
+}
+
+.section-art__p{
+	margin: 2em 0;
+	font-weight: 400;
+}
+
+.section-art__a{
+	text-decoration: none;
+	margin: 2em 0;
+	font-weight: 700;
+}
+
+.material-icons{
+	transform: translateY(.33em);
+}
+
+.section-img{
+	width: 49em;
+	height: 30em;
+}
+
+.personal-card{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.personal-card__div{
+	position: relative;
+	left: -8.5em;
+	top: -4.3em;
+	box-shadow: 0px 0px 4px #000;
+	background: #151515;
+	padding: .7em 12em 1.4em 1.1em;
+	animation-name: card;
+	animation-duration: 1000ms;
+	animation-delay: 400ms;
+}
+
+.personal-flex__div{
+	display: flex;
+}
+
+.personal-flex__img{
+	width: 3.2em;
+	height: 3.2em;
+	clip-path: circle(50% at 50% 50%);
+	margin: 0 0 0 .2em;
+}
+
+.personal-flex__text{
+	margin: .5em 1em 0 1em;
+}
+
+.personal-flex__text h4{
+	font-size: .8em;
+	font-weight: 500;
+}
+
+.personal-flex__text h5{
+	font-size: .64em;
+	font-weight: 500;
+	color: #555;
+	margin: .4em 0;
+}
+
+.personal-card__h3{
+	font-size: 1.4em;
+	font-weight: 700;
+	margin: .8em 0 0 .2em;
+}
+
+.footer{
+	font-size: .8em;
+	color: #333;
+	display: flex;
+	justify-content: center; 
+}
+
+@keyframes article{
+	0%{
+		filter: opacity(0%);
+	}
+
+	100%{
+		filter: opacity(100%);
+	}
+}
+
+@keyframes card {
+	0%{
+		transform: translateY(100em);
+	}
+
+	100%{
+		transform: translateY(0em);
+	}
+}
+
+@media screen and (max-width: 1024px){
+	.section-img{
+		width: 45em;
+		height: 26em;
+	}
+}
+
+@media screen and (max-width: 768px){
+	
+	#navbar{
+		margin: 2.5em 2em;
+	}
+
+	.navbar-div__li{
+		margin: auto 1em;
+	}
+
+	.section{
+		flex-direction: column;
+		margin: 3em 3em 0 2em;
+	}
+
+	.section-img{
+		width: 44.8em;
+		height: 26em;
+		margin: 2em 0 0 0;	
+	}
+}	
+
+@media screen and (max-width: 425px){
+	
+	.navbar{
+		display: block;
+		margin: 1.2em .9em;
+	}
+
+	.toggle-btn{
+		left: 24em;
+		top: 1em;
+		z-index: 200;
+		cursor: pointer;
+	}
+
+	.btn{
+		font-size: 1.5em;
+	}
+
+	.navbar__h3{
+		display: inline-block;
+	}
+
+	#navbar__div{
+		position: fixed;
+		left: 50em;
+		top: 0em;
+		width: 100%;
+		height: 100%;
+		transition: all 450ms ease-in;
+		background: #151515;
+		z-index: 150;
+	}
+
+	#navbar__div.active{
+		left: 0;
+	}
+
+	.navbar-div__ul{
+		margin: 50% 38%;
+	}
+
+	.navbar-div__li{
+		display: block;
+		margin: 2.3em 0;
+		text-align:center;
+	}
+
+	.section{
+		margin: 0 .9em 0 .9em;
+	}
+
+	.section-img{
+		width: 25.4em;
+		height: 18em;
+	}
+
+	.section-art__h1{
+		font-size: 2.2em;
+	}
+
+	.section-art__p{
+		font-size: .9em;
+	}
+
+	.personal-card__div{
+		position: relative;
+		left: -2em;
+		top: -4.3em;
+		padding: .7em 6em 1em 1.1em;
+	}	
+
+	.personal-card__h3{
+		font-size: .9em;
+	}
+}	
+
+@media screen and (max-width: 375px){
+
+	.toggle-btn{
+		left: 21.5em;
+		top: 1em;
+	}
+
+	.personal-card__div{
+		position: relative;
+		left: -2em;
+		top: -3em;
+		padding: .7em 6em 1.4em 1.1em;
+	}	
+
+	.section-img{
+		width: 22.1em;
+		height: 15em;
+	}
+	
+	.footer{
+		font-size: .6em;
+	}
+}
+
+@media screen and (max-width: 325px){
+
+	.toggle-btn{
+		left: 19em;
+		top: 1em;
+		z-index: 200;
+	}
+
+	.personal-card__div{
+		position: relative;
+		left: -2em;
+		top: -3em;
+		padding: .7em 3em 1.4em 1.1em;
+	}	
+
+	.section-img{
+		width: 19.5em;
+		height: 13em;
+	}
+	
+	.footer{
+		font-size: .6em;
+	}
+}
